@@ -82,7 +82,6 @@ class Engine
             foreach ($posts as &$post) {
                 $indexer->insert($post);
             }
-
         } catch (\Exception $e) {
             error_log('TNTSearch Error: ' . $e->getMessage());
             error_log('Error file: ' . $e->getFile() . ' Line: ' . $e->getLine());
@@ -102,18 +101,44 @@ class Engine
         $this->tnt->selectIndex($this->index_file);
         $this->tnt->fuzziness(true);
         $res = $this->tnt->search($query, $limit);
+        echo '<pre>' . print_r($res, true) . '</pre>';
 
-        if (empty($res['ids'])) {
+        //Filtramos por score
+        $ids = $this->filter_post_by_score($res);
+
+        if (empty($ids)) {
             return [];
         }
 
         $args = [
-            'post__in' => $res['ids'],
+            'post__in' => $ids,
             'orderby'  => 'post__in',
             'posts_per_page' => $limit
         ];
 
         return get_posts($args);
+    }
+
+    /**
+     * Filtra los IDs de los posts por su score, devolviendo solo aquellos con score > X
+     * @param mixed $res
+     * @return array
+     * @author Daniel Lucia
+     */
+    private function filter_post_by_score($res)
+    {
+        $filtered_ids = [];
+        foreach ($res['docScores'] as $id => $score) {
+            if ($score > 1.5) {
+                $filtered_ids[] = $id;
+            }
+        }
+
+        if (empty($filtered_ids)) {
+            return [];
+        }
+
+        return $filtered_ids;
     }
 
     /**
