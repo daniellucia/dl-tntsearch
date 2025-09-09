@@ -157,13 +157,11 @@ class Engine
             $search_term = $query->get('s');
 
             if ($search_term) {
-                $results = $this->search($search_term, $query->get('posts_per_page'));
+                $posts = $this->search($search_term, $query->get('posts_per_page'));
 
-                if (!empty($results)) {
-                    return $results;
-                } else {
-                    return [];
-                }
+                // Establecer el número de resultados encontrados
+                $query->found_posts = count($posts);
+                $query->max_num_pages = 1;
             }
         }
 
