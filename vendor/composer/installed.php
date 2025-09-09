@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'daniel-lucia/dl-tntsearch',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
+        'type' => 'wordpress-plugin',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        'daniel-lucia/dl-tntsearch' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'predis/predis' => array(
+            'pretty_version' => 'v2.4.0',
+            'version' => '2.4.0.0',
+            'reference' => 'f49e13ee3a2a825631562aa0223ac922ec5d058b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../predis/predis',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'teamtnt/tntsearch' => array(
+            'pretty_version' => 'v5.0.2',
+            'version' => '5.0.2.0',
+            'reference' => '7ee319d9d96a043164571eab87db72071014d66b',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../teamtnt/tntsearch',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

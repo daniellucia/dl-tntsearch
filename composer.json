@@ -1,0 +1,25 @@
+{
+    "name": "daniel-lucia/dl-tntsearch",
+    "description": "Replaces the native WordPress search with TNTSearch, providing faster, more accurate and relevant results.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Daniel Lucia",
+            "email": "daniellucia84@gmail.com",
+            "homepage": "http://daniellucia.es"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DL\\TNTSearch\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "autoloader-suffix": "DLTNTSearch"
+    },
+    "require": {
+        "teamtnt/tntsearch": "^5.0"
+    }
+}
