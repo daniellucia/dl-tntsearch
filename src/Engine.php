@@ -100,6 +100,7 @@ class Engine
     private function search($query, $limit = 10)
     {
         $this->tnt->selectIndex($this->index_file);
+        $this->tnt->fuzziness(true);
         $res = $this->tnt->search($query, $limit);
 
         if (empty($res['ids'])) {
