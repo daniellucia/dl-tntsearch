@@ -115,7 +115,17 @@ class Engine
             'posts_per_page' => $limit
         ];
 
-        return get_posts($args);
+        $posts = get_posts($args);
+
+        //Ordenamos los posts por su score
+        $scores = $res['docScores'];
+        usort($posts, function ($a, $b) use ($scores) {
+            $scoreA = $scores[$a->ID] ?? 0;
+            $scoreB = $scores[$b->ID] ?? 0;
+            return $scoreB <=> $scoreA;
+        });
+
+        return $posts;
     }
 
     /**
