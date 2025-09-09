@@ -30,16 +30,13 @@ class Engine
             $this->storage .= '/';
         }
 
-        $this->index_file = 'posts.index';
+        $this->index_file = 'data.index';
         $this->enabled = get_option('dl_tntsearch_enabled', 'no') === 'yes';
 
         $this->tnt = new TNTSearch;
         $this->tnt->loadConfig([
-            'driver'    => 'mysql',
-            'host'      => DB_HOST,
-            'database'  => DB_NAME,
-            'username'  => DB_USER,
-            'password'  => DB_PASSWORD,
+            'driver'    => 'sqlite',
+            'database'  => $this->storage . 'tntsearch.sqlite',
             'storage'   => $this->storage
         ]);
     }
@@ -65,16 +62,27 @@ class Engine
             wp_die(__('The storage path is not writable. Please check the permissions.', 'dl-tntsearch'));
         }
 
-        $post_types_in = implode("','", array_map('esc_sql', $indexed));
+
         global $wpdb;
 
-        $sql = "SELECT ID, post_title as title, post_content as article FROM {$wpdb->posts} WHERE post_status='publish' AND post_type IN ('$post_types_in')";
+        $post_types_in = implode("','", array_map('esc_sql', $indexed));
+        $sql = "SELECT ID, post_title, post_content, post_type
+        FROM {$wpdb->posts} 
+        WHERE post_status='publish' AND post_type IN ('$post_types_in');";
+        $posts = $wpdb->get_results($sql, ARRAY_A);
+
+        if (empty($posts)) {
+            return;
+        }
 
         try {
+
             $indexer = $this->tnt->createIndex($this->index_file);
-            $indexer->query($sql);
             $indexer->setPrimaryKey('ID');
-            $indexer->run();
+            foreach ($posts as &$post) {
+                $indexer->insert($post);
+            }
+
         } catch (\Exception $e) {
             error_log('TNTSearch Error: ' . $e->getMessage());
             error_log('Error file: ' . $e->getFile() . ' Line: ' . $e->getLine());
@@ -89,7 +97,7 @@ class Engine
      * @return array<int|\WP_Post>
      * @author Daniel Lucia
      */
-    public function search($query, $limit = 10)
+    private function search($query, $limit = 10)
     {
         $this->tnt->selectIndex($this->index_file);
         $res = $this->tnt->search($query, $limit);
@@ -150,5 +158,4 @@ class Engine
 
         return is_writable($this->storage);
     }
-
 }
