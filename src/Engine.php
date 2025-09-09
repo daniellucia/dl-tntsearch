@@ -101,7 +101,6 @@ class Engine
         $this->tnt->selectIndex($this->index_file);
         $this->tnt->fuzziness(true);
         $res = $this->tnt->search($query, $limit);
-        echo '<pre>' . print_r($res, true) . '</pre>';
 
         //Filtramos por score
         $ids = $this->filter_post_by_score($res);
