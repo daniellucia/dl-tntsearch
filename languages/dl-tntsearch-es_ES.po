@@ -1,0 +1,101 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TNTSearch for WordPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-10 05:25+0000\n"
+"PO-Revision-Date: 2025-09-10 05:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.1.29\n"
+"X-Domain: dl-tntsearch"
+
+#: src/Settings.php:87
+msgid "Activate"
+msgstr "Activar"
+
+#: src/Settings.php:20
+msgid "Ajustes de TNTSearch"
+msgstr "Ajustes de TNTSearch"
+
+#: src/Settings.php:108
+msgid "Click the button below to manually index your content."
+msgstr ""
+"Haga clic en el botón a continuación para indexar manualmente su contenido."
+
+#: src/Settings.php:92
+msgid "Custom Post Types to index"
+msgstr "Custom Post Types para indexar"
+
+#. Author of the plugin
+msgid "Daniel Lúcia"
+msgstr "Daniel Lucía"
+
+#: src/Settings.php:83
+msgid "Enable TNTSearch"
+msgstr "Habilitar TNTSearch"
+
+#: src/Engine.php:88
+msgid "Error creating the index: "
+msgstr "Error al crear el índice:"
+
+#. Author URI of the plugin
+msgid "http://www.daniellucia.es"
+msgstr "http://www.daniellucia.es"
+
+#: src/Settings.php:107
+msgid "Index"
+msgstr "Índice"
+
+#: src/Settings.php:110
+msgid "Index now"
+msgstr "Indexar ahora"
+
+#. Description of the plugin
+msgid ""
+"Replaces the native WordPress search with TNTSearch, providing faster, more "
+"accurate and relevant results."
+msgstr ""
+"Reemplaza la búsqueda nativa de WordPress con TNTSearch, proporcionando "
+"resultados más rápidos, precisos y relevantes."
+
+#: src/Settings.php:103
+msgid "Save"
+msgstr "Guardar"
+
+#: src/Engine.php:25
+msgid "Storage path is required for Indexer."
+msgstr "La ruta de almacenamiento es necesaria para el indexador."
+
+#: src/Settings.php:66
+msgid "The index has been generated correctly."
+msgstr "El índice se ha generado correctamente."
+
+#: src/Settings.php:73
+msgid ""
+"The PDO SQLite extension is not enabled on your server. Please enable it to "
+"use TNTSearch."
+msgstr ""
+"La extensión PDO SQLite no está habilitada en su servidor. Habilítela para "
+"usar TNTSearch."
+
+#: src/Engine.php:62
+msgid "The storage path is not writable. Please check the permissions."
+msgstr "La ruta de almacenamiento no es escribible. Verifique los permisos."
+
+#: src/Settings.php:21
+msgid "TNTSearch"
+msgstr "TNTSearch"
+
+#. Name of the plugin
+msgid "TNTSearch for WordPress"
+msgstr "TNTSearch en WordPress"
+
+#: src/Settings.php:78
+msgid "TNTSearch settings"
+msgstr "Configuración de TNTSearch"
