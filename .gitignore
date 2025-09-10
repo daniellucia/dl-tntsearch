@@ -1,4 +1,4 @@
 languages/*-backup*
 languages/*~
 storage/*.index
-storage/*.sqlite
+#storage/*.sqlite
