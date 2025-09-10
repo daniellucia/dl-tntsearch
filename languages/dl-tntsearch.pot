@@ -1,0 +1,97 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: TNTSearch for WordPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-10 05:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.2; php-8.1.29\n"
+"X-Domain: dl-tntsearch"
+
+#: src/Settings.php:87
+msgid "Activate"
+msgstr ""
+
+#: src/Settings.php:20
+msgid "Ajustes de TNTSearch"
+msgstr ""
+
+#: src/Settings.php:108
+msgid "Click the button below to manually index your content."
+msgstr ""
+
+#: src/Settings.php:92
+msgid "Custom Post Types to index"
+msgstr ""
+
+#. Author of the plugin
+msgid "Daniel Lúcia"
+msgstr ""
+
+#: src/Settings.php:83
+msgid "Enable TNTSearch"
+msgstr ""
+
+#: src/Engine.php:88
+msgid "Error creating the index: "
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://www.daniellucia.es"
+msgstr ""
+
+#: src/Settings.php:107
+msgid "Index"
+msgstr ""
+
+#: src/Settings.php:110
+msgid "Index now"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Replaces the native WordPress search with TNTSearch, providing faster, more "
+"accurate and relevant results."
+msgstr ""
+
+#: src/Settings.php:103
+msgid "Save"
+msgstr ""
+
+#: src/Engine.php:25
+msgid "Storage path is required for Indexer."
+msgstr ""
+
+#: src/Settings.php:66
+msgid "The index has been generated correctly."
+msgstr ""
+
+#: src/Settings.php:73
+msgid ""
+"The PDO SQLite extension is not enabled on your server. Please enable it to "
+"use TNTSearch."
+msgstr ""
+
+#: src/Engine.php:62
+msgid "The storage path is not writable. Please check the permissions."
+msgstr ""
+
+#: src/Settings.php:21
+msgid "TNTSearch"
+msgstr ""
+
+#. Name of the plugin
+msgid "TNTSearch for WordPress"
+msgstr ""
+
+#: src/Settings.php:78
+msgid "TNTSearch settings"
+msgstr ""
