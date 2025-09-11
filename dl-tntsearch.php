@@ -11,6 +11,23 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
+/*
+Copyright (C) 2025  Daniel Lucia (https://daniellucia.es)
+
+Este programa es software libre: puedes redistribuirlo y/o modificarlo
+bajo los términos de la Licencia Pública General GNU publicada por
+la Free Software Foundation, ya sea la versión 2 de la Licencia,
+o (a tu elección) cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil,
+pero SIN NINGUNA GARANTÍA; ni siquiera la garantía implícita de
+COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR.
+Consulta la Licencia Pública General GNU para más detalles.
+
+Deberías haber recibido una copia de la Licencia Pública General GNU
+junto con este programa. En caso contrario, consulta <https://www.gnu.org/licenses/gpl-2.0.html>.
+*/
+
 use DL\TNTSearch\Plugin;
 
 defined('ABSPATH') || exit;
