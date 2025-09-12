@@ -47,3 +47,14 @@ add_action('plugins_loaded', function () {
     $plugin = new Plugin();
     $plugin->init();
 });
+
+/**
+ * Limpiamos caché al activar o desactivar el plugin
+ */
+register_activation_hook(__FILE__, function() {
+    wp_cache_flush();
+});
+
+register_deactivation_hook(__FILE__, function() {
+    wp_cache_flush();
+});
