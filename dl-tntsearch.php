@@ -40,7 +40,7 @@ define('DL_TNTSEARCH_PATH', plugin_dir_path(__FILE__));
 define('DL_TNTSEARCH_STORAGE_PATH', plugin_dir_path(__FILE__) . 'storage/');
 define('DL_TNTSEARCH_URL', plugin_dir_url(__FILE__));
 
-add_action('init', function () {
+add_action('plugins_loaded', function () {
 
     load_plugin_textdomain('dl-tntsearch', false, dirname(plugin_basename(__FILE__)) . '/languages');
 
